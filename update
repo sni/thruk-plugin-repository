@@ -1,0 +1,5 @@
+#!/bin/bash
+
+cd $(dirname $0)
+git pull 2>&1 | grep -v 'Already up-to-date.'
+./update_plugin_list

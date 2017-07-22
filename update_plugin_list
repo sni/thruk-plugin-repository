@@ -27,6 +27,9 @@ sub main {
     my $output = _array2hash(-s $output_file ? decode_json(read_file($output_file)) : [], 'name');
     for my $plugin (sort { $a->{'name'} cmp $b->{'name'} } @{$input}) {
         if(_update_plugin($plugin)) {
+            if($output->{$plugin->{'name'}} && $output->{$plugin->{'name'}}->{'version'} ne $plugin->{'version'}) {
+                printf("%s updated %s -> %s\n", $plugin->{'name'}, $output->{$plugin->{'name'}}->{'version'}, $plugin->{'version'});
+            }
             _json_lock_store($output_file, $input, 1);
         } elsif($output->{$plugin->{'name'}}) {
             # fetching new release failed, use old one if available
