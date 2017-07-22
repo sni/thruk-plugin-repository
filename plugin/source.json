@@ -1,0 +1,14 @@
+[
+  {
+    "name": "omd",
+    "url": "https://github.com/sni/thruk-plugin-omd"
+  },
+  {
+    "name": "woshsh",
+    "url": "https://github.com/sni/thruk-plugin-woshsh"
+  },
+  {
+    "name": "editor",
+    "url": "https://github.com/sni/thruk-plugin-editor"
+  }
+]
