@@ -14,5 +14,10 @@
   {
     "name": "check_cmkagent",
     "url": "https://github.com/comnetgmbh/thruk-check-cmkagent"
+  },
+  {
+    "name": "pansnaps",
+    "url": "https://github.com/ConSol/thruk-plugin-pansnaps"
   }
+
 ]
