@@ -56,8 +56,13 @@ sub _update_plugin {
             return;
         }
         my $release = $data->[0];
-        $plugin->{'version'} = $release->{'name'};
-        $plugin->{'tarball'} = $release->{'tarball_url'};
+        if($release) {
+            $plugin->{'version'} = $release->{'name'};
+            $plugin->{'tarball'} = $release->{'tarball_url'};
+        } else {
+            $plugin->{'version'} = 'unreleased';
+            $plugin->{'tarball'} = sprintf('https://github.com/%s/%s/archive/master.tar.gz', $owner, $repo);
+        }
 
         # fetch description
         my $description;
@@ -78,6 +83,7 @@ sub _update_plugin {
         warn("unsupported input url scheme: ".Dumper($plugin));
         return;
     }
+    $plugin->{'version'} = '' unless defined $plugin->{'version'};
     return($plugin);
 }
 
