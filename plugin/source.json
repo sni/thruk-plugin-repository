@@ -18,6 +18,9 @@
   {
     "name": "pansnaps",
     "url": "https://github.com/ConSol/thruk-plugin-pansnaps"
+  },
+  {
+    "name": "status-dashboard",
+    "url": "https://github.com/sni/thruk-plugin-status-dashboard"
   }
-
 ]
