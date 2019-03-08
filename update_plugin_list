@@ -4,7 +4,7 @@ use warnings;
 use strict;
 use File::Copy qw/move/;
 use File::Slurp qw/read_file/;
-use Cpanel::JSON::XS qw/encode_json decode_json/;
+use Cpanel::JSON::XS qw/decode_json/;
 use Carp qw/confess/;
 use Fcntl qw/:mode :flock/;
 use LWP::UserAgent;
@@ -105,7 +105,7 @@ sub _get_page {
 sub _json_lock_store {
     my($file, $data, $changed_only) = @_;
 
-    my $json = JSON::XS->new->utf8;
+    my $json = Cpanel::JSON::XS->new->utf8;
     $json = $json->pretty;
     $json = $json->canonical;
 
