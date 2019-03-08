@@ -4,7 +4,7 @@ use warnings;
 use strict;
 use File::Copy qw/move/;
 use File::Slurp qw/read_file/;
-use JSON::XS qw/encode_json decode_json/;
+use Cpanel::JSON::XS qw/encode_json decode_json/;
 use Carp qw/confess/;
 use Fcntl qw/:mode :flock/;
 use LWP::UserAgent;
