@@ -20,6 +20,10 @@
     "url": "https://github.com/ConSol/thruk-plugin-pansnaps"
   },
   {
+    "name": "node-control",
+    "url": "https://github.com/sni/thruk-plugin-node-control"
+  },
+  {
     "name": "status-dashboard",
     "url": "https://github.com/sni/thruk-plugin-status-dashboard"
   }
