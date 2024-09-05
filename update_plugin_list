@@ -71,6 +71,7 @@ sub _update_plugin {
         };
         if($@) {
             warn(sprintf("fetching description for %s (%s) failed: %s", $plugin->{'name'}, $plugin->{'url'}, $@));
+            return;
         } else {
             $description =~ s/^Version:.*$//gmx;
             $description =~ s/^Url:.*$//gmx;
