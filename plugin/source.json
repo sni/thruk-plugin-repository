@@ -8,20 +8,12 @@
     "url": "https://github.com/sni/thruk-plugin-woshsh"
   },
   {
-    "name": "editor",
-    "url": "https://github.com/sni/thruk-plugin-editor"
-  },
-  {
     "name": "check_cmkagent",
     "url": "https://github.com/comnetgmbh/thruk-check-cmkagent"
   },
   {
     "name": "pansnaps",
     "url": "https://github.com/ConSol/thruk-plugin-pansnaps"
-  },
-  {
-    "name": "node-control",
-    "url": "https://github.com/sni/thruk-plugin-node-control"
   },
   {
     "name": "status-dashboard",
